@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dataHolder"
+            type="com.aksysefa.assignment5.ui.posts.viewmodel.PostsViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.details.detailFragment">
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post Body: "
+            android:textSize="13sp"
+            tools:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBodyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textStyle="bold"
+            tools:text="Body" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/ivPostImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="end"
+                android:scaleType="centerCrop"
+                android:src="@{dataHolder.isFavorite ? @drawable/ic_red_favorite : @drawable/ic_baseline_favorite_24}" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>
