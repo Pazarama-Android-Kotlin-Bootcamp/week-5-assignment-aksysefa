@@ -7,7 +7,8 @@
 
         <variable
             name="dataHolder"
-            type="com.aksysefa.assignment5.data.model.PostDTO" />
+            type="com.aksoysefa.week5_assignment.ui.model.PostDTO" />
+
 
     </data>
 
